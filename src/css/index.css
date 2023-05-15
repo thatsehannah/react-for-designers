@@ -19,6 +19,7 @@ a {
   height: 920px;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
 
 .hero-group {
@@ -67,6 +68,20 @@ a {
   transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
+.hero svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.hero .logos {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 40px;
+  margin: 100px 0;
+  justify-items: center;
+}
+
 @media (max-width: 640px) {
   .hero-group {
     padding: 100px 20px;
@@ -78,6 +93,10 @@ a {
 
   .hero p {
     font-size: 24px;
+  }
+
+  .hero .logos {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
